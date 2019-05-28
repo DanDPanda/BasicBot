@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/DanDPanda/BasicBot/issues"
   },
-  "homepage": "https://github.com/DanDPanda/BasicBot#readme"
+  "homepage": "https://github.com/DanDPanda/BasicBot#readme",
+  "dependencies": {
+    "discord.js": "^11.5.0",
+    "dotenv": "^8.0.0",
+    "mysql": "^2.17.1"
+  }
 }
