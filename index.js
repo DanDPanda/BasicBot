@@ -17,5 +17,5 @@ bot.on("ready", () => {
 // This reads the message and sends the appropriate command
 bot.on("message", message => {
   let commandFile = require(`./message.js`);
-  commandFile.run(bot, message);
+  commandFile.run(message);
 });
