@@ -1,0 +1,19 @@
+{
+  "name": "basicbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanDPanda/BasicBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanDPanda/BasicBot/issues"
+  },
+  "homepage": "https://github.com/DanDPanda/BasicBot#readme"
+}
