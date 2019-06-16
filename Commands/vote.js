@@ -1,5 +1,8 @@
 // This is what is run when the this function is called
-exports.run = async message => {
+exports.run = async (client, message) => {
+  if (message.channel.type === "dm") {
+    return;
+  }
   if (
     message.content.split(" ")[0].toLowerCase() === "!vote" &&
     message.content.split(`"`).length === 3 &&
@@ -27,7 +30,6 @@ exports.run = async message => {
             i < message.content.split(`"`)[2].split(` `).length;
             i++
           ) {
-            console.log(icons[i]);
             await mess.react(icons[i]);
           }
         } catch (e) {

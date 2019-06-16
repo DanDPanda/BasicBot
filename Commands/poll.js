@@ -1,5 +1,8 @@
 // This is what is run when the this function is called
-exports.run = async message => {
+exports.run = async (client, message) => {
+  if (message.channel.type === "dm") {
+    return;
+  }
   if (
     message.content.split(" ")[0].toLowerCase() === "!poll" &&
     message.content.split(`"`).length === 3
