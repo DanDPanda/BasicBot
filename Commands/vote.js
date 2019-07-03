@@ -22,8 +22,8 @@ exports.run = async (client, message) => {
     message.content.split(`"`)[2].split(` `).length > 1 &&
     message.content.split(`"`)[2].split(` `).length <= 10
   ) {
-    let combinedMessage = "```";
-    combinedMessage += message.content.split(`"`)[1] + "\n";
+    let combinedMessage = "```\n";
+    combinedMessage += `${message.content.split(`"`)[1]}\n\n`;
     for (
       let i = 0;
       i < message.content.split(`"`)[2].split(` `).length - 1;
