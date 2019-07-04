@@ -28,9 +28,15 @@ exports.run = async (client, message) => {
           if (member.roles.some(r => [target].includes(r.name))) {
             member.removeRole(role);
             message.author.send(`${target} was removed from your roles.`);
-          } else {
+          } else if (
+            client.guilds
+              .get(process.env.CHANNEL)
+              .roles.some(r => [target].includes(r.name))
+          ) {
             member.addRole(role);
             message.author.send(`${target} was added to your roles.`);
+          } else {
+            message.author.send(`${target} does not exist.`);
           }
         });
     } catch (e) {
