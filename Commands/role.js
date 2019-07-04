@@ -2,13 +2,13 @@ require("dotenv").config();
 
 // This is what is run when the this function is called
 exports.run = async (client, message) => {
+  const command = message.content.split(" ")[0];
+  const target = message.content.split(" ")[1];
+
   if (
-    message.content.split(" ")[0].toLowerCase() === "!role" &&
+    command.toLowerCase() === "!role" &&
     message.content.split(" ").length === 2
   ) {
-    // Gets the string of the role name
-    const target = message.content.split(" ")[1];
-
     // Prevents the bot from giving access to the these roles.
     if (target === "Admin") {
       return;
