@@ -7,7 +7,8 @@ exports.run = async (client, message) => {
         .slice(1)}`);
       commandFile.run(client, message);
     } catch (e) {
-      conosle.error("Command doesn't exist.");
+      console.log("e", e);
+      console.error("Command doesn't exist.");
     }
   }
 };
